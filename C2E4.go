@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//Exercise 2: Write a function that takes an int value and gives that many terms of the Fibonacci sequence.
+//Exercise 4: Write a function that takes an int value and gives that many terms of the Fibonacci sequence.
 func main() {
 	i := 10
 	fmt.Println(fibonacci(i))
