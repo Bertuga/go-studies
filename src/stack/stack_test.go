@@ -12,6 +12,10 @@ func TestPush(t *testing.T) {
 	stack.Push(5)
 	stack.Push(6)
 	stack.Push(7)
+	if len(stack.contents) != 7 {
+		t.Log("Number of elements should be 7!")
+		t.Fail()
+	}
 }
 
 func TestPop(t *testing.T) {
