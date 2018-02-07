@@ -2,14 +2,22 @@ package main
 
 import "fmt"
 
-//Exercise 3: Write a function that takes a variable number of ints and print each integer on a separate line.
-func main() {
-	print_ints(1, 3, 6, 8)
-	print_ints(2, 44, 66, 43, 0, 22)
-}
+/*Exercise 3: Solve this problem, called the Fizz-Buzz problem:
+Write a program that prints the numbers from 1 to 100.
+But for multiples of three print, "Fizz" instead of the number, and for multiples of five, print "Buzz".
+For numbers which are multiples of both three and five, print "FizzBuzz".*/
 
-func print_ints(ints ...int) {
-	for _, v := range ints {
-		fmt.Println(v)
+func main() {
+	for i := 1; i <= 100; i++ {
+		switch {
+		case i%3 == 0 && i%5 == 0:
+			fmt.Println("FizzBuzz")
+		case i%3 == 0:
+			fmt.Println("Fizz")
+		case i%5 == 0:
+			fmt.Println("Buzz")
+		default:
+			fmt.Println(i)
+		}
 	}
 }
