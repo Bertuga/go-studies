@@ -1,7 +1,5 @@
 package stack
 
-import "fmt"
-
 type Stack struct {
 	contents []int
 	index    int
@@ -20,4 +18,8 @@ func (s *Stack) Pop() int {
 	copy(slice, s.contents)
 	s.contents = slice
 	return i
+}
+
+func (s *Stack) Size() int {
+	return len(s.contents)
 }
