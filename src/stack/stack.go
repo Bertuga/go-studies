@@ -1,5 +1,7 @@
 package stack
 
+import "fmt"
+
 type Stack struct {
 	contents []int
 	index    int
